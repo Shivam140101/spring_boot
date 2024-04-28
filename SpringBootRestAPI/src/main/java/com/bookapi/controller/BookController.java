@@ -50,7 +50,7 @@ public class BookController {
     public ResponseEntity<Void> deleteBook( @PathVariable("id") int id){
         try {
             service.removeBook(id);
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+            return ResponseEntity.status(HttpStatus.ACCEPTED).build();
         }catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
