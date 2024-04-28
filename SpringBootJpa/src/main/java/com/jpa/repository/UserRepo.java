@@ -11,4 +11,6 @@ import java.util.List;
 public interface UserRepo extends CrudRepository<User,Integer> {
 
     public List<User> findByName(String name);
+    public List<User> findByNameAndCity(String name, String city);
+    public List<User> findByNameStartingWith(String prefix);
 }

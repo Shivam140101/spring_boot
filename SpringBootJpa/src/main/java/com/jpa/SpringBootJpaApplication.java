@@ -80,8 +80,14 @@ public class SpringBootJpaApplication {
 //		System.out.println("yoo");
 //		System.out.println("Test");
 
-		List<User> byName = bean.findByName("Thor");
-		byName.forEach(System.out::println);
+//		List<User> byName = bean.findByName("Thor");
+//		byName.forEach(System.out::println);
+
+//		List<User> byNameAndCity = bean.findByNameAndCity("Thor", "Asgard");
+//		byNameAndCity.forEach(System.out::println);
+
+//		List<User> startingWith = bean.findByNameStartingWith("T");
+//		startingWith.forEach(System.out::println);
 	}
 
 }
