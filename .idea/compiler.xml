@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBootMVC" />
-        <module name="FirstSpringBootApp" />
         <module name="SpringBootJpa" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="FirstSpringBootApp" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
