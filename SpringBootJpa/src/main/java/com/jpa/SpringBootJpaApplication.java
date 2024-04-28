@@ -78,6 +78,7 @@ public class SpringBootJpaApplication {
 //		bean.deleteById(1);
 //		System.out.println("deleted");
 //		System.out.println("yoo");
+		System.out.println("Test");
 	}
 
 }
