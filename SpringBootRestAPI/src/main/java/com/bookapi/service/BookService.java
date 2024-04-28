@@ -2,7 +2,6 @@ package com.bookapi.service;
 
 import com.bookapi.entity.Book;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +10,7 @@ import java.util.stream.Collectors;
 @Component
 public class BookService {
 
-    private static List<Book> list = new ArrayList<Book>();
+    private static List<Book> list = new ArrayList<>();
 
     static {
         list.add(new Book(12,"Python","Cody"));
@@ -24,7 +23,7 @@ public class BookService {
         return list;
     }
 
-    // get Single Book By Id
+    // get Single Book By id
     public Book getBookById(int id) {
         Book book;
         book = list.stream().filter(e -> e.getId() == id).findFirst().get();
