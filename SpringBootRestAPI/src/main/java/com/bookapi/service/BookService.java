@@ -25,8 +25,12 @@ public class BookService {
 
     // get Single Book By id
     public Book getBookById(int id) {
-        Book book;
-        book = list.stream().filter(e -> e.getId() == id).findFirst().get();
+        Book book = null;
+        try {
+            book = list.stream().filter(e -> e.getId() == id).findFirst().get();
+        }catch (Exception e) {
+            System.err.println("Failed to find book");
+        }
         return book;
     }
 
