@@ -40,5 +40,19 @@ public class MyController {
         return "iterate";
     }
 
+    // Handler for Conditional Statements
+    @GetMapping("/condition")
+    public String conditionHandler(Model model){
+
+        System.out.println("ConditionHandler Executed");
+
+        model.addAttribute("isActive",false);
+        model.addAttribute("gender","M");
+
+        List<Integer> list = List.of(233/*, 45, 65, 55, 5678*/);
+        model.addAttribute("myList",list);
+        return "condition";
+    }
+
 
 }
