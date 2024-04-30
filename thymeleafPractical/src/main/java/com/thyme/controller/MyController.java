@@ -55,4 +55,12 @@ public class MyController {
     }
 
 
+    // Handler for including fragments
+    @GetMapping("/service")
+    public String serviceHandler(Model model){
+
+        return "service";
+    }
+
+
 }
