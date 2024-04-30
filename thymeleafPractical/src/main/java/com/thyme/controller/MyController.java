@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -59,6 +60,8 @@ public class MyController {
     @GetMapping("/service")
     public String serviceHandler(Model model){
 
+        model.addAttribute("title", "My Name is Shivam Ahlawat");
+        model.addAttribute("subtitle", LocalDateTime.now().toString());
         return "service";
     }
 
