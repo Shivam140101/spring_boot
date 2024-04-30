@@ -3,10 +3,12 @@ package com.thyme.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
 import java.util.Date;
+import java.util.List;
 
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -25,6 +27,17 @@ public class MyController {
 
         return "about";
         // show about.html
+    }
+
+
+    // handling iteration
+    @GetMapping("/example-loop")
+    public String iterateHandler(Model model){
+
+
+        List<String> names = List.of("Ankit", "Laxmi", "Karan", "John");
+        model.addAttribute("names", names);
+        return "iterate";
     }
 
 
